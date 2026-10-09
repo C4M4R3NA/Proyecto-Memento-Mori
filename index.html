@@ -2,35 +2,150 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Catálogo de Joyería</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memento Mori - Catálogo de Joyería</title>
+    <!-- Fuente Gótica desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f9fa; color: #333; }
-        h1 { text-align: center; color: #2c3e50; }
-        .catalogo { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
-        .producto { background: white; border: 1px solid #ddd; padding: 15px; border-radius: 8px; width: 200px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .producto img { width: 100%; height: auto; border-radius: 4px; }
-        .precio { font-weight: bold; color: #27ae60; margin: 10px 0; }
-        .btn { background-color: #3498db; color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; display: inline-block; }
+        body { 
+            font-family: 'Cinzel', serif, Arial, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background-color: #0d0d0d; 
+            color: #e0e0e0; 
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        .marca {
+            font-family: 'UnifrakturMaguntia', cursive;
+            font-size: 4.5rem;
+            color: #b30024;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(179, 0, 36, 0.4);
+            letter-spacing: 2px;
+        }
+
+        .slogan {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #cccccc;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+        }
+
+        h1 { 
+            text-align: center; 
+            color: #ffffff; 
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            border-bottom: 1px solid #800020;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .catalogo { 
+            display: flex; 
+            gap: 25px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            margin-top: 20px; 
+        }
+
+        .producto { 
+            background: #1a1a1a; 
+            border: 1px solid #800020; 
+            padding: 20px; 
+            border-radius: 8px; 
+            width: 220px; 
+            text-align: center; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(179, 0, 36, 0.3);
+        }
+
+        .producto img { 
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover; 
+            border-radius: 4px; 
+            border: 1px solid #333;
+        }
+
+        .producto h3 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin: 15px 0 10px 0;
+        }
+
+        .precio { 
+            font-weight: bold; 
+            color: #e60039; 
+            font-size: 1.2rem;
+            margin: 10px 0 15px 0; 
+        }
+
+        .btn { 
+            background-color: #800020; 
+            color: #ffffff; 
+            padding: 10px 15px; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            display: inline-block; 
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+            border: 1px solid #b30024;
+        }
+
+        .btn:hover {
+            background-color: #b30024;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Catálogo de Joyería</h1>
+    <header>
+        <h2 class="marca">Memento Mori</h2>
+        <p class="slogan">Decora tu vida</p>
+        <h1>Catálogo de Joyería</h1>
+    </header>
 
     <div class="catalogo">
+        <!-- Anillo Ajustable -->
         <div class="producto">
-            <h3>Cadena de Plata</h3>
-            <p class="precio">$450 MXN</p>
-            <a href="#" class="btn">Pedir por WhatsApp</a>
-        </div>
-        <div class="producto">
+            <img src="anillo-ajustable.jpg" alt="Anillo Ajustable">
             <h3>Anillo Ajustable</h3>
             <p class="precio">$300 MXN</p>
             <a href="#" class="btn">Pedir por WhatsApp</a>
         </div>
+
+        <!-- Pulsera Tejida -->
         <div class="producto">
+            <img src="pulsera-tejida.jpg" alt="Pulsera Tejida">
             <h3>Pulsera Tejida</h3>
             <p class="precio">$250 MXN</p>
+            <a href="#" class="btn">Pedir por WhatsApp</a>
+        </div>
+ 
+        <!-- Cadena de Plata -->
+        <div class="producto">
+            <img src="cadena-plata.jpg" alt="Cadena de Plata">
+            <h3>Cadena de Plata</h3>
+            <p class="precio">$450 MXN</p>
             <a href="#" class="btn">Pedir por WhatsApp</a>
         </div>
     </div>
